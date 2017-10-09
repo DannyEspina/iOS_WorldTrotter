@@ -18,11 +18,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var deselect: MKAnnotation?
     
     var string1 = "Hialeah, FL"
-    var string1s = "The town where I was born"
+    var string1s = NSLocalizedString("The town I was born", comment: "Brith city")
     var string2 = "Duncan, SC"
-    var string2s = "The town where I live now"
+    var string2s = NSLocalizedString("Where I live now", comment: "City I live in")
     var string3 = "Vina Del Mar, Chile"
-    var string3s = "The place where I would like to live"
+    var string3s = NSLocalizedString("City that I would like to live in", comment: "dream city")
     
     override func loadView() {
         // Create a map view
@@ -30,8 +30,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         // Set it as *the* view of this view controller
         view = mapView
-        
-        let segmentedControl = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
+        let standardString = NSLocalizedString("Standard", comment: "Standard map view")
+        let satelliteString = NSLocalizedString("Satellite", comment: "Satellite map view")
+        let hybridString = NSLocalizedString("Hybrid", comment: "Hybrid map view")
+        let segmentedControl = UISegmentedControl(items: [standardString, hybridString, satelliteString])
         segmentedControl.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
@@ -60,7 +62,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     func initLocalizationButton(){
         let localizationButton = UIButton.init(type: .system)
-        localizationButton.setTitle("Localization", for: .normal)
+        let localString = NSLocalizedString("Locate Me", comment: "button string to locate user")
+        localizationButton.setTitle(localString, for: .normal)
         localizationButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(localizationButton)
         
@@ -77,7 +80,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     func initPinButton() {
         let pinButton = UIButton.init(type: .system)
-        pinButton.setTitle("Instresting locations", for: .normal)
+        let pinString = NSLocalizedString("Instresting Locations", comment: "button text for pins")
+        pinButton.setTitle(pinString, for: .normal)
         pinButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pinButton)
         

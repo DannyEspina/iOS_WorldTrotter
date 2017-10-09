@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHR-4M-7GC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHR-4M-7GC">
                                 <rect key="frame" x="65" y="314" width="246" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -29,13 +29,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxs-N5-K7r">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxs-N5-K7r">
                                 <rect key="frame" x="130.5" y="171" width="114" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-qd-30p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-qd-30p">
                                 <rect key="frame" x="39.5" y="120" width="296" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,13 +61,17 @@
                             <constraint firstItem="Pof-pn-75E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Em-1C-1rh"/>
                             <constraint firstItem="Gxs-N5-K7r" firstAttribute="top" secondItem="FhW-qd-30p" secondAttribute="bottom" constant="8" id="6fe-9t-cjU"/>
                             <constraint firstItem="YHR-4M-7GC" firstAttribute="centerX" secondItem="FhW-qd-30p" secondAttribute="centerX" id="8nZ-m5-73Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YHR-4M-7GC" secondAttribute="trailing" constant="64" id="93o-ZC-9xO"/>
+                            <constraint firstItem="YHR-4M-7GC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="BqU-pO-85E"/>
                             <constraint firstItem="FhW-qd-30p" firstAttribute="centerX" secondItem="Pof-pn-75E" secondAttribute="centerX" id="UKS-5W-9BX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FhW-qd-30p" secondAttribute="trailing" constant="39.5" id="Xpt-5e-Gi0"/>
                             <constraint firstItem="Pof-pn-75E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="ctS-Be-Tye"/>
                             <constraint firstItem="Gxs-N5-K7r" firstAttribute="centerX" secondItem="FhW-qd-30p" secondAttribute="centerX" id="eQa-qT-vhk"/>
                             <constraint firstItem="aye-FL-rLe" firstAttribute="top" secondItem="Gxs-N5-K7r" secondAttribute="bottom" constant="8" id="eTE-qa-03Z"/>
                             <constraint firstItem="aye-FL-rLe" firstAttribute="centerX" secondItem="FhW-qd-30p" secondAttribute="centerX" id="fqJ-bf-caU"/>
                             <constraint firstItem="FhW-qd-30p" firstAttribute="top" secondItem="Pof-pn-75E" secondAttribute="bottom" constant="8" id="ora-ex-Itm"/>
                             <constraint firstItem="YHR-4M-7GC" firstAttribute="top" secondItem="aye-FL-rLe" secondAttribute="bottom" constant="8" id="rYr-VI-8wt"/>
+                            <constraint firstItem="FhW-qd-30p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39.5" id="t7s-HZ-mbf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -92,10 +96,10 @@
         <!--Map-->
         <scene sceneID="9fw-WY-1Cw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="waB-i3-MDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IU9-EQ-fam" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="ASi-GA-Vjj"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waB-i3-MDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="62" y="140"/>
         </scene>
@@ -115,6 +119,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rvT-FT-JKZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9xm-SE-Jcp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
